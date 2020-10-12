@@ -3,6 +3,9 @@
 
 set -e
 
+# databases can be replaced with a shared location
+db_dir="~/databases"
+
 # setupt conda and mamba
 conda config --add channels defaults
 conda config --add channels bioconda
@@ -42,11 +45,14 @@ cd ~
 wget https://zenodo.org/record/3992790/files/test_reads.tar.gz
 tar -xzf test_reads.tar.gz
 
+rm -f test_reads.tar.gz # id this deleted by defautl?
+
+echo "Test reads memory usage is"
+du -h -d1 test_reads
 
 
 
-atlas init -w working_dir test_reads
-# databases can be replaced with a shared location --db-dir /path/to/databases
+atlas init -w working_dir --db-dir $db_dir test_reads
 
 cat samples.tsv
 
@@ -54,14 +60,24 @@ cat samples.tsv
 # run atlas this installs software via conda
 atlas run assembly -w working_dir --profile Demo
 
-atlas run genecaalog -w working_dir --profile Demo
+atlas run genecatalog -w working_dir --profile Demo
 
 atlas run binning -w working_dir --profile Demo --omit-from download_checkm_data maxbin
 
 set +e # might trow an error in rule maxbin
 atlas run binning -w working_dir --profile Demo
-
+set -e
 
 # clean up so participants can restart from the beginning
+rm -r working_dir
 
-rm -r -w working_dir
+# remove environment so it will be installed again
+rm -r $db_dir/conda_envs/0e459907
+
+# unisntall metagenome atlas so participants can install it again
+mamba uninstall -y metagenome-atlas
+
+echo "finished setup"
+
+echo "Software memory usage is "
+du -h -d1 $db_dir
