@@ -16,7 +16,7 @@ cp human_genome.fasta $db_dir
 conda config --add channels defaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
-
+export CONDA_ALWAYS_YES="true"
 
 #mamba is faster version of conda
 conda install -y mamba
@@ -75,7 +75,7 @@ rm -r working_dir
 rm -r $db_dir/conda_envs/0e459907
 
 conda deactivate
-
+unset CONDA_ALWAYS_YES
 echo "finished setup"
 
 echo "Software memory usage is "
