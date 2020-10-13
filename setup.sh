@@ -5,6 +5,11 @@ set -e
 # docker pull conda/miniconda3
 # docker run -i -t conda/miniconda3 /bin/bash
 
+# databases can be replaced with a shared location
+db_dir="~/databases"
+
+
+# test if python 3.6
 python_version= $(python --version)
 if [[ $python_version =~ "3.6" ]]; then
 echo "Found python 3.6"
@@ -15,9 +20,8 @@ fi
 
 
 
-
-# databases can be replaced with a shared location
-db_dir="~/databases"
+mkdir -p $db_dir
+cp human_genome.fasta $db_dir
 
 # setupt conda and mamba
 conda config --add channels defaults
