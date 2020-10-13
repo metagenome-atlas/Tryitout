@@ -12,11 +12,18 @@ db_dir="~/databases"
 mkdir -p $db_dir
 cp human_genome.fasta $db_dir
 
+#set langauge locale
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+    
+
+
 # setupt conda and mamba
 conda config --add channels defaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
 export CONDA_ALWAYS_YES="true"
+
 
 #mamba is faster version of conda
 conda install -y mamba
