@@ -39,7 +39,7 @@ source activate adminenv
 
 atlas --version
 
-
+nano --version
 
 # set up profile for each user
 mkdir -p ~/.config/snakemake/
