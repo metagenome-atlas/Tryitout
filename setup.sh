@@ -1,7 +1,20 @@
 #!/usr/bin/env bash
-
-
 set -e
+
+## install in docker with python 3.6
+# docker pull conda/miniconda3
+# docker run -i -t conda/miniconda3 /bin/bash
+
+python_version= $(python --version)
+if [[ $python_version =~ "3.6" ]]; then
+echo "Found python 3.6"
+else
+echo "I want 3.6"
+exit 1
+fi
+
+
+
 
 # databases can be replaced with a shared location
 db_dir="~/databases"
@@ -15,7 +28,6 @@ conda config --add channels conda-forge
 #mamba is faster version of conda
 conda install -y mamba
 
-mamba install -y pathon=3.6
 
 #install nano if not available
 mamba install -y nano
