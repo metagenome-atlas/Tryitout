@@ -12,17 +12,10 @@ conda config --add channels bioconda
 conda config --add channels conda-forge
 
 
-# if python version not 3.6 use conda Environment
-python_version= $(python --version)
-if [[ $python_version =~ "3.6" ]]; then
-echo "have python 3.6"
-else
-conda create -n atlasenv python3.6
-. activate atlasenv
-fi
-
 #mamba is faster version of conda
 conda install -y mamba
+
+mamba install -y pathon=3.6
 
 #install nano if not available
 mamba install -y nano
