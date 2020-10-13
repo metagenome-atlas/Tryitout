@@ -1,0 +1,17 @@
+
+version: 2
+
+jobs:
+  test:
+    docker:
+      - image: continuumio/miniconda3
+    steps:
+      - checkout
+      - run: ./setup.sh
+     
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
+   
