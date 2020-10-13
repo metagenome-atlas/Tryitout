@@ -30,7 +30,7 @@ conda install -y mamba
 
 
 #install nano if not available
-mamba install -y nano
+mamba install -y nano wget
 
 # install metagenome-atlas in its own environemnt
 mamba create -n adminenv metagenome-atlas
