@@ -61,7 +61,7 @@ du -h -d1 test_reads
 
 atlas init -w working_dir --db-dir $db_dir test_reads
 
-cat samples.tsv
+cat working_dir/samples.tsv
 
 
 # run atlas this installs software via conda
