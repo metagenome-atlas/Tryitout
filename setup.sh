@@ -43,7 +43,7 @@ nano --version
 
 # set up profile for each user
 mkdir -p ~/.config/snakemake/
-mv profile ~/.config/snakemake/Demo
+cp -r profile ~/.config/snakemake/Demo
 
 # go Home
 cd ~
