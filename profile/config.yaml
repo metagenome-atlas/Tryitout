@@ -2,6 +2,7 @@ cores: 2
 resources:
   - mem=2
   - java_mem=2
+rerun-incomplete: true
 omit-from:
   - download_checkm_data # don't start CheckM
   - gene_subsets # don't start EggNOG
