@@ -1,23 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
-## install in docker with python 3.6
+## install in docker with python 3
 # docker pull conda/miniconda3
 # docker run -i -t conda/miniconda3 /bin/bash
 
 # databases can be replaced with a shared location
 db_dir="~/databases"
-
-
-# test if python 3.6
-python_version= $(python --version)
-if [[ $python_version =~ "3.6" ]]; then
-echo "Found python 3.6"
-else
-echo "I want 3.6"
-exit 1
-fi
-
 
 
 mkdir -p $db_dir
@@ -36,8 +25,10 @@ conda install -y mamba
 #install nano if not available
 mamba install -y nano
 
-# install metagenome-atlas
-mamba install -y metagenome-atlas
+# install metagenome-atlas in its own environemnt
+mamba create -n adminenv metagenome-atlas
+
+source activate adminenv
 
 atlas --version
 
@@ -83,8 +74,7 @@ rm -r working_dir
 # remove environment so it will be installed again
 rm -r $db_dir/conda_envs/0e459907
 
-# unisntall metagenome atlas so participants can install it again
-mamba uninstall -y metagenome-atlas
+conda deactivate
 
 echo "finished setup"
 
