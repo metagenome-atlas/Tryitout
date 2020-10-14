@@ -9,6 +9,9 @@ The goal is that users can install metagenome-atlas and initialize a new project
 
 ## Setup
 
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://circleci.com/gh/metagenome-atlas/Tryitout)
+
+
 Run the setup.sh script
 
 ## Usage
