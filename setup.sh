@@ -6,7 +6,7 @@ set -e
 # docker run -i -t conda/miniconda3 /bin/bash
 
 # databases can be replaced with a shared location
-db_dir="~/databases"
+db_dir=$HOME/databases
 
 
 mkdir -p $db_dir
@@ -49,7 +49,7 @@ mkdir -p ~/.config/snakemake/
 cp -r profile ~/.config/snakemake/Demo
 
 # go Home
-cd ~
+cd 
 
 # get example data
 wget https://zenodo.org/record/3992790/files/test_reads.tar.gz
