@@ -15,7 +15,7 @@ cp human_genome.fasta $db_dir
 #set langauge locale
 export LC_ALL=C.UTF-8
 export LANG=C.UTF-8
-    
+ 
 
 
 # setupt conda and mamba
@@ -60,6 +60,7 @@ rm -f test_reads.tar.gz # id this deleted by defautl?
 echo "Test reads memory usage is"
 du -h -d1 test_reads
 
+snakemake_args=" -w working_dir --profile Demo -p "
 
 
 atlas init -w working_dir --db-dir $db_dir test_reads
@@ -68,14 +69,14 @@ cat working_dir/samples.tsv
 
 
 # run atlas this installs software via conda
-atlas run assembly -w working_dir --profile Demo
+atlas run assembly  $snakemake_args
 
-atlas run genecatalog -w working_dir --profile Demo
+atlas run genecatalog  $snakemake_args
 
-atlas run binning -w working_dir --profile Demo --omit-from download_checkm_data maxbin
+atlas run binning  $snakemake_args --omit-from download_checkm_data maxbin
 
 set +e # might trow an error in rule maxbin
-atlas run binning -w working_dir --profile Demo
+atlas run binning  $snakemake_args
 set -e
 
 # clean up so participants can restart from the beginning
