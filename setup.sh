@@ -28,6 +28,9 @@ export CONDA_ALWAYS_YES="true"
 #mamba is faster version of conda
 conda install -y mamba
 
+#update conda
+mamba update -n base -c defaults conda
+
 
 #install nano if not available
 mamba install -y nano wget
