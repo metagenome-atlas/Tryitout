@@ -75,9 +75,9 @@ atlas run genecatalog  $snakemake_args
 
 atlas run binning  $snakemake_args --omit-from download_checkm_data maxbin
 
-set +e # might trow an error in rule maxbin
-atlas run binning  $snakemake_args
-set -e
+#set +e # might trow an error in rule maxbin
+#atlas run binning  $snakemake_args
+#set -e
 
 # clean up so participants can restart from the beginning
 rm -r working_dir
