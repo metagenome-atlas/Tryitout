@@ -19,6 +19,7 @@ export LANG=C.UTF-8
 
 
 # setupt conda and mamba
+conda init bash
 conda config --add channels defaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
