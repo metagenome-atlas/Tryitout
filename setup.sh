@@ -89,8 +89,8 @@ atlas run binning  $snakemake_args
 rm -r working_dir
 
 # remove environment so it will be installed again
-prodigal_env=$(grep prodigal  $db_dir/conda_envs/*.yaml | cut -f1 -d'.')
-rm -r $prodigal_env
+qc_env=$(grep pigz  $db_dir/conda_envs/*.yaml | cut -f1 -d'.')
+rm -r $qc_env
 
 conda deactivate
 unset CONDA_ALWAYS_YES
