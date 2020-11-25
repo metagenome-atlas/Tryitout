@@ -73,7 +73,7 @@ atlas run assembly  $snakemake_args
 
 atlas run genecatalog  $snakemake_args
 
-atlas run binning  $snakemake_args --omit-from download_checkm_data maxbin
+atlas run binning  $snakemake_args
 
 #set +e # might trow an error in rule maxbin
 #atlas run binning  $snakemake_args
