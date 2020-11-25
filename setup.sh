@@ -31,7 +31,7 @@ conda install -y mamba
 #update conda
 mamba update -n base -c defaults conda
 # install python3.6 in base environment
-conda install python=3.6
+mamba install python=3.6
 
 
 #install nano if not available
