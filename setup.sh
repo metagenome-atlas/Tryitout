@@ -15,7 +15,7 @@ cp human_genome.fasta $db_dir
 #set langauge locale
 export LC_ALL=C.UTF-8
 export LANG=C.UTF-8
- 
+
 
 
 # setupt conda and mamba
@@ -50,8 +50,11 @@ nano --version
 mkdir -p ~/.config/snakemake/
 cp -r profile ~/.config/snakemake/Demo
 
+#copy script
+cp get_part2.sh ~
+
 # go Home
-cd 
+cd
 
 # get example data
 wget https://zenodo.org/record/3992790/files/test_reads.tar.gz
