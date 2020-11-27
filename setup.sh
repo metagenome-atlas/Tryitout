@@ -8,6 +8,7 @@ set -e
 # databases can be replaced with a shared location
 db_dir=$HOME/databases
 
+this_folder=$(pwd)
 
 mkdir -p $db_dir
 cp human_genome.fasta $db_dir
@@ -98,3 +99,8 @@ echo "finished setup"
 
 echo "Software memory usage is "
 du -h -d1 $db_dir
+
+
+# remove folder
+echo "remove $this_folder"
+rm -r $this_folder
