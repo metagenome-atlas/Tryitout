@@ -20,7 +20,6 @@ cp human_genome.fasta $db_dir
 
 
 # setupt conda and mamba
-conda init bash
 conda config --add channels defaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
@@ -32,6 +31,7 @@ conda install -y mamba
 
 #update conda
 mamba update -n base -c defaults conda
+conda init bash
 # install python3.6 in base environment
 mamba install python=3.6
 
