@@ -35,6 +35,9 @@ mamba update -n base -c defaults conda
 # install python3.6 in base environment
 mamba install python=3.6
 
+# install dependencies in env
+mamba env update -n base -f part2/jupyter_env.yaml
+
 
 #install nano if not available
 mamba install -y nano wget
