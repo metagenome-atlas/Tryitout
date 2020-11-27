@@ -70,10 +70,12 @@ rm -f test_reads.tar.gz # id this deleted by defautl?
 echo "Test reads memory usage is"
 du -h -d1 test_reads
 
+mv test_reads $db_dir/..
+
 snakemake_args=" -w working_dir --profile Demo -p "
 
 
-atlas init -w working_dir --db-dir $db_dir test_reads
+atlas init -w working_dir --db-dir $db_dir $db_dir/../test_reads
 
 cat working_dir/samples.tsv
 
