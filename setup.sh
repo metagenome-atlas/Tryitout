@@ -6,7 +6,7 @@ set -e
 # docker run -i -t conda/miniconda3 /bin/bash
 
 # databases can be replaced with a shared location
-db_dir=$HOME/databases
+db_dir=/data/databases
 
 this_folder=$(pwd)
 
@@ -31,7 +31,7 @@ conda install -y mamba
 
 #update conda
 mamba update -n base -c defaults conda
-conda init bash
+#conda init bash
 # install python3.6 in base environment
 mamba install python=3.6
 
@@ -52,11 +52,11 @@ atlas --version
 nano --version
 
 # set up profile for each user
-mkdir -p ~/.config/snakemake/
-cp -r profile ~/.config/snakemake/Demo
+mkdir -p /etc/xdg/snakemake #~/.config/snakemake/
+cp -r profile /etc/xdg/snakemake/Demo  #~/.config/snakemake/Demo
 
 #copy script
-cp get_part2.sh ~
+#cp get_part2.sh ~
 
 # go Home
 cd
