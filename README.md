@@ -1,5 +1,7 @@
 # Try out Atlas
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/metagenome-atlas/Tryitout/main)
+
 This repo contains the instruction to setup Metagenome-Atlas with limited resources specified in the profile.
 It uses a small test dataset that contain two samples with some small genomes that could be assembled and binned.
 
