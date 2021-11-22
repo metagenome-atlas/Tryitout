@@ -65,7 +65,8 @@ echo "> contig_1\nAAAAAAAAAAATTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" > $d
 ## Test
 
 echo "Run atlas test"
-snakemake_args=" -w working_dir -j 2 --resources mem=5 java_mem=5 "
+export DEMO="--resources mem=5 java_mem=5 --omit-from download_checkm_data gene_subsets -j2"
+snakemake_args=" -w working_dir $DEMO "
 
 
 atlas init -w working_dir --db-dir $db_dir $db_base_dir/test_reads
