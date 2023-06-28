@@ -1,18 +1,10 @@
-cores: 2
-resources:
-  - mem=2
-  - java_mem=2
+
 rerun-incomplete: true
 omit-from:
-  - download_checkm_data # don't start CheckM
+  - checkm2_download_db # don't start CheckM
   - gene_subsets # don't start EggNOG
 
 config:
-  - mem=2
-  - threads=2
-  - assembly_memory=2
-  - assembly_threads=2
-  - simplejob_mem=2
-  - simplejob_threads=2
-  - large_mem=2
-  - large_threads=2
+  - final_binner=metabat
+  - filter_chimieric_bins=false
+
