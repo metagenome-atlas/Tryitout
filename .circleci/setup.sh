@@ -59,7 +59,7 @@ echo "Test reads memory usage is"
 du -h -d1 $db_base_dir/test_reads
 
 
-echo "> contig_1\nAAAAAAAAAAATTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" > $db_dir/human_genome.fasta
+echo "> contig_1\nAAAAAAAAAAATTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" > $db_dir/host_genome.fasta
 
 
 ## Test
