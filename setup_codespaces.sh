@@ -34,4 +34,4 @@ echo "> contig_1\nAAAAAAAAAAATTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" > ho
 echo "finished setup"
 
 
-
+mamba init
