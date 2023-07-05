@@ -1,5 +1,23 @@
 # Try out Atlas
 
+This repo contains the instruction to setup [Metagenome-Atlas](https://github.com/metagenome-atlas/atlas) with limited resources.
+
+You probably followed the [Tutorial](https://github.com/metagenome-atlas/Tutorial) to arrive here.
+Otherwise you can do the [interactive totorial](https://metagenome-atlas.shinyapps.io/TryAtlas). 
+
+## Setup
+If you see this in the GitHub Codespaces environment.
+
+You should see a `terminal` in the bottom plane.
+
+➤ Make it bigger. 
+➤ Run the `setup_codespaces.sh` script in the terminal
+
+
+
+
+<!--
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/metagenome-atlas/Tryitout/main)
 
 This repo contains the instruction to setup Metagenome-Atlas with limited resources specified in the profile.
@@ -21,3 +39,5 @@ Run the setup.sh script
 ```
 mamba install metagenome-atlas
 ```
+
+-->
