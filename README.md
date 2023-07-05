@@ -12,7 +12,7 @@ You should see a `terminal` in the bottom plane.
 
 ➤ Make the terminal it bigger. 
 
-➤ Run the `setup_codespaces.sh` script in the terminal
+➤ Run  `./setup_codespaces.sh` in the terminal
 
 
 
