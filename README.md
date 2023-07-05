@@ -10,7 +10,8 @@ If you see this in the GitHub Codespaces environment.
 
 You should see a `terminal` in the bottom plane.
 
-➤ Make it bigger. 
+➤ Make the terminal it bigger. 
+
 ➤ Run the `setup_codespaces.sh` script in the terminal
 
 
